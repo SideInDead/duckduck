@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    width: 100%;
+    counter-reset: hits;
+    background-color: #088ae0;
+    background-image: url(../img/Games_Duck_Hunt_Nintendo_Dendy_Nes_025749_9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+
+.count{
+    position: absolute;
+    left: 50%;
+    bottom: 4.5%;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(66, 231, 231);
+    transform: translateX(-50%);
+}
+
+.count::after{
+    content:counter(hits);
+}
+
+input[type="checkbox"]:checked{
+    counter-increment: hits;
+}
+
